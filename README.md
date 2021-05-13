@@ -35,11 +35,13 @@ TBD
 ## Code reference
 11. Yoon, Jim. (2021, TBD). IMMM-SFA/wm-abm: Water Management Agent Based Model (Version TBD). DOI TBD
 12. Yoon, Jim, & Thurber, Travis. (2021, May 5). IMMM-SFA/iwmm: MOSART-WM-ABM (Version v1.1.2.abm). Zenodo. http://doi.org/10.5281/zenodo.4739516
+13. Yoon, Jim. (2021, TBD). IMMM-SFA/wm-pmp: PMP calibration and simulation for MOSART-WM-ABM (Version TBD). DOI TBD
 
 ## Contributing modeling software
 | Model | Version | Repository Link | DOI |
 |-------|---------|-----------------|-----|
 | wm-abm | TBD | https://github.com/IMMM-SFA/wm-abm | TBD |
+| wm-pmp | TBD | https://github.com/IMMM-SFA/wm-pmp | TBD |
 | MOSART-WM-ABM | v1.1.2.abm | https://github.com/IMMM-SFA/iwmm | http://doi.org/10.5281/zenodo.4739516 |
 
 ## Reproduce my experiment
@@ -54,22 +56,24 @@ __0a.__ Preprocess the USDA data to produce these files:
 
 __0b.__ Download the Cropland Data Layer (CDL) files for 2008-2018 from __[7]__ and preprocess:
    * For each year, sum the pixels for each CDL Crop category within each 1/8 degree North American Land Data Assimilation System (NLDAS) grid cell using ArcMap or similar tool; producing files like `cdl_{year}_clean.csv`
-   * Run the script `cdl_processing.py` to combine the yearly files into a single file in the expected format: `all_nldas_cdl_data_v3.txt`
-__0c.__ Run the script `wmabm_data_process.py` to generate these files: TBD:
-   * `crop_ids_by_farm_and_constraint.p` - TBD
-   * `crop_ids_by_farm.p` - TBD
-   * `gammas_new_20201102_protocol2.p` - TBD
-   * `hist_avail_bias_correction_20201102.csv` - TBD
-   * `hist_dependent_storage.csv` - TBD
-   * `max_land_constr_20201102_protocol2.p` - TBD
-   * `MOSART_WM_PMP_inputs_20201028.xlsx` - TBD
-   * `net_prices_new_20201102_protocol2.p` - TBD
-   * `NLDAS_Grid_Reference.csv` - TBD
-   * `nldas_ids.p` - TBD
-   * `nldas.txt` - TBD
-   * `water_constraints_by_farm_pyt278.p` - TBD
+   * Run the script `cdl_processing.py` from __[11]__ to combine the yearly files into a single file in the expected format: `all_nldas_cdl_data_v3.txt`
 
-__1.__ The results of step 0a are available as part of the code repository __[11]__; the results of step 0b can be downloaded from __[9]__; the results of step 0c are available as part of the code repository __[12]__.
+__0c.__ Preprocess the output from steps __0a__ and __0b__ for use in MOSART-WM-ABM:
+   * `crop_ids_by_farm.p` - Pickled dictionary mapping farm ID to the list of crop IDs on the farm; developed as part of this experiment.
+   * `NLDAS_Grid_Reference.csv` - Maps NLDAS IDs to latitude/longitude coordinates; developed as part of this experiment by spatially joining an NLDAS shapefile with a U.S. counties shapefile in GIS.
+   * `nldas.txt` - Subset of columns from `NLDAS_Grid_Reference.csv`.
+   * `nldas_ids.p` - Pickled list of NLDAS IDs to be included in the optimization; developed as part of this experiment.
+   * Run the script `wmabm_data_process.py` from __[11]__ to generate the following files:
+      * `max_land_constr_20201102_protocol2.p`
+      * `MOSART_WM_PMP_inputs_20201028.xlsx`
+   * Run the script `hist_water_availability_abm.py` from __[13]__ which ingests some output files from a historical MOSART-WM simulation to generate the following files:
+      * `hist_dependent_storage.csv`
+      * `hist_avail_bias_correction_20201102.csv`
+   * Run the script `MOSART_WM_PMP_stage1_noloop.py` from __[13]__ to generate the following files:
+      * `gammas_new_20201102_protocol2.p`
+      * `net_prices_new_20201102_protocol2.p`
+
+__1.__ The results of step __0a__ are available as part of the code repository __[11]__; the results of step __0b__ can be downloaded from __[9]__; the results of step __0c__ are available as part of the code repository __[12]__.
 
 __2.__ Download and unpack the MOSART-WM-ABM input data from __[8]__ into a supercomputing environment.
 
@@ -84,7 +88,8 @@ __4.__ From the repository root directory, setup the model with the following sh
    * `./xmlchange RUN_STARTDATE=1940-01-01`
    * `./xmlchange STOP_OPTION=nyears`
    * `./xmlchange STOP_N=70`
-   * `./xmlchange JOB_WALLCLOCK_TIME=35:00:00` (_you may need more or less wallclock time depending on machine_)
+   * `./xmlchange JOB_WALLCLOCK_TIME=35:00:00`
+     (_you may need more or less wallclock time depending on machine_)
    * `./xmlchange JOB_QUEUE={name of a job queue in your supercomputing environment}`
    * `./case.setup`
 
