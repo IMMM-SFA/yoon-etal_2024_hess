@@ -11,7 +11,7 @@ Jim Yoon<sup>1\*</sup>, Nathalie Voisin<sup>1</sup>, Christian Klassert<sup>1</s
 \* corresponding author:  jim.yoon@pnnl.gov
 
 ## Abstract
-TBD
+Threats to water security are a paramount global concern, largely driven by human pressures on scarce water resources. The irrigation of croplands, which accounts for the lion’s share of human water consumption, is especially critical in understanding water security trajectories. Despite irrigation’s defining role, large-scale water security modeling frameworks typically impose trajectories of land use that underlie long term irrigation demand, neglecting dynamic feedbacks in the form of human instigation of and subsequent adaptation to water scarcity via irrigated crop area change. We introduce a large-scale, multi-agent hydroeconomic model applied to the United States to explore the interplay between hydrologic-driven water availability, reservoir management, and farmer adaptation via crop choice. The degree of farmer adaptivity is specified using a positive economic approach calibrated to observed data. Comparative experiments reveal that neglecting adaptive farmer behavior via crop area choice leads to pronounced overestimation of long term water security declines, with farmer adaptation alleviating U.S.-wide annual water shortage by as much as 58 percent in a hypothetical experiment that mimics U.S. hydrology from 1950-2009.
 
 ## Journal reference
 TBD
@@ -26,7 +26,7 @@ TBD
 5. USDA 2012 Census of Agriculture. (2013 and 2008). Table 36. Estimated Quantity of Water Applied and Primary Method of Distribution by Selected Crops Harvested in the Open [Online]. Available at https://www.nass.usda.gov/Publications/AgCensus/2012/Online_Resources/Farm_and_Ranch_Irrigation_Survey/fris13_2_036_036.pdf (accessed 2021-04-12; verified 2021-04-12). USDA-NASS, Washington, DC.
 6. USDA Economic Research Service using data from USDA’s Agricultural Resource Management Survey (ARMS) and other sources. (1995-2017). Published Commodity Costs and Returns [Online]. Available at https://www.ers.usda.gov/data-products/commodity-costs-and-returns/commodity-costs-and-returns (accessed 2021-05-12; verified 2021-05-12). USDA-NASS, Washington, DC
 7. USDA National Agricultural Statistics Service Cropland Data Layer. (2008-2018). Published crop-specific data layer [Online]. Available at https://nassgeodata.gmu.edu/CropScape/ (accessed 2021-04-05; verified 2021-04-05). USDA-NASS, Washington, DC.
-8. Mosart input data TBD
+8. Voisin, N et al. (2018). MOSART-WM-ABM Input Data [Data set]. Zenodo. https://doi.org/10.5281/zenodo.4836886.
 
 ### Output data
 9. Yoon, Jim. (2021). TBD the `all_nldas_cdl_data_v3.txt` [Data set]. Zenodo. TBD DOI
@@ -34,7 +34,7 @@ TBD
 
 ## Code reference
 11. Yoon, Jim. (2021, TBD). IMMM-SFA/wm-abm: Water Management Agent Based Model (Version TBD). DOI TBD
-12. Yoon, Jim, & Thurber, Travis. (2021, May 5). IMMM-SFA/iwmm: MOSART-WM-ABM (Version v1.1.2.abm). Zenodo. http://doi.org/10.5281/zenodo.4739516
+12. Yoon, Jim, & Thurber, Travis. (2021, May 5). IMMM-SFA/iwmm: MOSART-WM-ABM (Version v1.1.2.abm). Zenodo. http://doi.org/10.5281/zenodo.4739516.
 13. Yoon, Jim. (2021, TBD). IMMM-SFA/wm-pmp: PMP calibration and simulation for MOSART-WM-ABM (Version TBD). DOI TBD
 
 ## Contributing modeling software
@@ -94,7 +94,7 @@ __4.__ From the repository root directory, setup the model with the following sh
    * `./case.setup`
 
 __5.__ Make the following modifications to the file `user_nl_mosart` in the root of your run directory:
-   * Change the value of `parafile` to the absolute path to the file of the same name downloaded in step 2.
+   * Change the value of `parafile` to `'{absolute path to your unpacked data directory from step 2}/US_reservoir_8th_NLDAS3_updated_CERF_Livneh_naturalflow.nc'`.
    * Add a new line with: `frivinp_rtm = '{absolute path to your unpacked data directory from step 2}/MOSART_NLDAS_8th_20160426.nc'`
 
 __6.__ Build the model with the shell command: `./case.build`
