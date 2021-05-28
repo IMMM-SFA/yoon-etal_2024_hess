@@ -26,7 +26,7 @@ TBD
 5. USDA 2012 Census of Agriculture. (2013 and 2008). Table 36. Estimated Quantity of Water Applied and Primary Method of Distribution by Selected Crops Harvested in the Open [Online]. Available at https://www.nass.usda.gov/Publications/AgCensus/2012/Online_Resources/Farm_and_Ranch_Irrigation_Survey/fris13_2_036_036.pdf (accessed 2021-04-12; verified 2021-04-12). USDA-NASS, Washington, DC.
 6. USDA Economic Research Service using data from USDA’s Agricultural Resource Management Survey (ARMS) and other sources. (1995-2017). Published Commodity Costs and Returns [Online]. Available at https://www.ers.usda.gov/data-products/commodity-costs-and-returns/commodity-costs-and-returns (accessed 2021-05-12; verified 2021-05-12). USDA-NASS, Washington, DC
 7. USDA National Agricultural Statistics Service Cropland Data Layer. (2008-2018). Published crop-specific data layer [Online]. Available at https://nassgeodata.gmu.edu/CropScape/ (accessed 2021-04-05; verified 2021-04-05). USDA-NASS, Washington, DC.
-8. Voisin, N et al. (2018). MOSART-WM-ABM Input Data [Data set]. Zenodo. https://doi.org/10.5281/zenodo.4836886.
+8. Voisin, N. et al. (2018). MOSART-WM-ABM Input Data [Data set]. Zenodo. https://doi.org/10.5281/zenodo.4836886.
 
 ### Output data
 9. Yoon, Jim. (2021). TBD the `all_nldas_cdl_data_v3.txt` [Data set]. Zenodo. TBD DOI
