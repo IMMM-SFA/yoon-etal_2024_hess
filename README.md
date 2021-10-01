@@ -2,7 +2,7 @@ _your zenodo badge here_
 
 # yoon-etal_2021_natsustain
 
-**Dynamic farmer practices substantially alleviate the perception of water scarcity**
+**Farmer cropping adaptation alleviates simulated water shortage in the United States**
 
 Jim Yoon<sup>1\*</sup>, Nathalie Voisin<sup>1</sup>, Christian Klassert<sup>1</sup>, Travis Thurber<sup>1</sup>, Wenwei Xu<sup>1</sup>
 
@@ -11,7 +11,7 @@ Jim Yoon<sup>1\*</sup>, Nathalie Voisin<sup>1</sup>, Christian Klassert<sup>1</s
 \* corresponding author:  jim.yoon@pnnl.gov
 
 ## Abstract
-Threats to water security are a paramount global concern, largely driven by human pressures on scarce water resources. The irrigation of croplands, which accounts for the lion’s share of human water consumption, is especially critical in understanding water security trajectories. Despite irrigation’s defining role, large-scale water security modeling frameworks typically impose trajectories of land use that underlie long term irrigation demand, neglecting dynamic feedbacks in the form of human instigation of and subsequent adaptation to water scarcity via irrigated crop area change. We introduce a large-scale, multi-agent hydroeconomic model applied to the United States to explore the interplay between hydrologic-driven water availability, reservoir management, and farmer adaptation via crop choice. The degree of farmer adaptivity is specified using a positive economic approach calibrated to observed data. Comparative experiments reveal that neglecting adaptive farmer behavior via crop area choice leads to pronounced overestimation of long term water security declines, with farmer adaptation alleviating U.S.-wide annual water shortage by as much as 58 percent in a hypothetical experiment that mimics U.S. hydrology from 1950-2009.
+Threats to water security are a paramount global concern, largely driven by human pressures on scarce water resources. The irrigation of croplands, which accounts for the lion’s share of human water consumption, is critical in understanding water security trajectories. Despite irrigation’s defining role, large-scale water security modeling frameworks typically impose trajectories of land use that underlie irrigation demand, neglecting dynamic feedbacks in the form of human instigation of and subsequent adaptation to water scarcity via irrigated cropping changes. We introduce a large-scale, multi-agent hydroeconomic model applied to the United States to evaluate water shortage outcomes that emerge from the interplay between hydrologic-driven water availability, reservoir management, and farmer cropping adaptation. Farmer cropping adaptivity is specified using a positive economic approach calibrated to observed data. Comparative experiments reveal that neglecting farmer cropping adaptation leads to pronounced overestimation of water shortages, with adaptation alleviating U.S.-wide annual water shortage by as much as 58 percent in a numerical experiment that mimics U.S. hydrology from 1950-2009.
 
 ## Journal reference
 TBD
