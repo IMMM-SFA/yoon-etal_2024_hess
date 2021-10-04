@@ -104,4 +104,22 @@ __7.__ Submit the model run to the job queue with the shell command: `./case.sub
 __8.__ If all is well, the model will eventually run, generating output and log files into your directory within the supercomputer's scratch file system, including the data found in __[10]__.
 
 ## Reproduce my figures
-TBD
+Reproduce my figures:
+
+The figures for the manuscript are generated based on post-processing of MOSART-WM-ABM output files in Python, Tableau, QGIS, and Inkscape. The WM-ABM working directory contains two general types of output files: 1) monthly netCDF output files with the MOSART-WM results (e.g., river flows, water demand, water shortage, etc.) and, 2) csv files containing annual ABM results (crop types, crop areas, etc.). The general steps are laid out below:
+
+__1.__ The monthly netCDF files are post-processed into a consolidated csv file using the "WM_output_PIC_ncdf.py" script. The script reads in monthly the MOSART-WM netCDF files, calculates various annual summary statistics (e.g., average supply for each cell by year), saves the summary statistics into a pandas dataframe, and finally outputs the pandas dataframe as a csv (e.g., "wm_summary_results.csv").
+
+__2.__ The "abm_output_processing.py" script is used to further post-process output, taking the annual abm output csv files and the wm summary file generated in __[1]__ above as inputs.
+
+__3.__ Figure 1a is generated based upon taking post-processed output from __[2]__ and developing the final visualizations in Tableau. Final touch ups (e.g., drought labels) are added in Inkscape.
+
+__4.__ Figure 1b is generated based upon taking post-processed output from __[2]__ and generating the final maps in QGIS. A Stamen Terrain Background map is used for the visualization using QuickMapServices in QGIS. Final touch ups (e.g., modification of label locations) are conducted in Inkscape.
+
+__5.__ The crop area bump charts (left side) of Figure 2 are generated based upon taking post-processed output from __[2]__ and developing the final visualizations in Tableau. See guide here: http://www.datatableauandme.com/2017/08/how-to-area-bump-chart-in-tableau.html
+
+__6.__ The shortage and adaptivity maps (right side) of Figure 2 are generated taking post-processed output from __[2]__ and developing the final visualizations in QGIS with final touch ups conducted in Inkscape.
+
+__7.__ Figure 3 is generated based upon taking post-processed output from __[2]__ and developing the final visualizations in Tableau. Final touch ups (e.g., drought labels) are added in Inkscape.
+
+__8.__ Figure 4 is developed in Powerpoint and does not rely on any data inputs
