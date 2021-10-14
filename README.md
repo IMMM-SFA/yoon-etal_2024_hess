@@ -33,9 +33,9 @@ TBD
 10. Yoon, Jim. (2021). TBD other output data [Data set]. Zenodo. TBD DOI
 
 ## Code reference
-11. Yoon, Jim. (2021, TBD). IMMM-SFA/wm-abm: Water Management Agent Based Model (Version TBD). DOI TBD
+11. Yoon, Jim. (2021, TBD). IMMM-SFA/wm-abm_pmp: Water Management Agent Based Model (v1.0.0). Zenodo. http://doi.org/10.5281/zenodo.5570864.
 12. Yoon, Jim, & Thurber, Travis. (2021, May 5). IMMM-SFA/iwmm: MOSART-WM-ABM (Version v1.1.2.abm). Zenodo. http://doi.org/10.5281/zenodo.4739516.
-13. Yoon, Jim. (2021, TBD). IMMM-SFA/wm-pmp: PMP calibration and simulation for MOSART-WM-ABM (Version TBD). DOI TBD
+13. Yoon, Jim. (2021, TBD). IMMM-SFA/wm-abm_data_processing: PMP calibration and simulation for MOSART-WM-ABM (v1.0.0). Zenodo. http://doi.org/10.5281/zenodo.5570501.
 
 ## Contributing modeling software
 | Model | Version | Repository Link | DOI |
