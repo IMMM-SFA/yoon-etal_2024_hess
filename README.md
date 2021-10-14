@@ -40,8 +40,8 @@ TBD
 ## Contributing modeling software
 | Model | Version | Repository Link | DOI |
 |-------|---------|-----------------|-----|
-| wm-abm | TBD | https://github.com/IMMM-SFA/wm-abm | TBD |
-| wm-pmp | TBD | https://github.com/IMMM-SFA/wm-pmp | TBD |
+| wm-abm_pmp | v1.0.0 | https://github.com/IMMM-SFA/wm-abm_pmp | http://doi.org/10.5281/zenodo.5570864 |
+| wm-pmp | v1.0.0 | https://github.com/IMMM-SFA/wm-abm_data_processing | http://doi.org/10.5281/zenodo.5570501 |
 | MOSART-WM-ABM | v1.1.2.abm | https://github.com/IMMM-SFA/iwmm | http://doi.org/10.5281/zenodo.4739516 |
 
 ## Reproduce my experiment
