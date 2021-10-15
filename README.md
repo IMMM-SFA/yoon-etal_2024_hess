@@ -1,4 +1,4 @@
-_your zenodo badge here_
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5573141.svg)](https://doi.org/10.5281/zenodo.5573141)
 
 # yoon-etal_2021_natsustain
 
