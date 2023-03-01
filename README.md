@@ -1,6 +1,6 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5573141.svg)](https://doi.org/10.5281/zenodo.5573141)
 
-# yoon-etal_2021_natsustain
+# yoon-etal_2023_natcomm
 
 **Farmer cropping adaptation alleviates simulated water shortage in the United States**
 
