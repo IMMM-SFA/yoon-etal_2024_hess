@@ -1,8 +1,8 @@
 _your zenodo badge here_
 
-# yoon-etal_2021_natsustain
+# yoon-etal_2021_hess
 
-**Farmer cropping adaptation alleviates simulated water shortage in the United States**
+**Representing Farmer Irrigated Crop Area Adaptation in a Large-Scale Hydrological Model**
 
 Jim Yoon<sup>1\*</sup>, Nathalie Voisin<sup>1</sup>, Christian Klassert<sup>1</sup>, Travis Thurber<sup>1</sup>, Wenwei Xu<sup>1</sup>
 
@@ -11,7 +11,7 @@ Jim Yoon<sup>1\*</sup>, Nathalie Voisin<sup>1</sup>, Christian Klassert<sup>1</s
 \* corresponding author:  jim.yoon@pnnl.gov
 
 ## Abstract
-Threats to water security are a paramount global concern, largely driven by human pressures on scarce water resources. The irrigation of croplands, which accounts for the lion’s share of human water consumption, is critical in understanding water security trajectories. Despite irrigation’s defining role, large-scale water security modeling frameworks typically impose trajectories of land use that underlie irrigation demand, neglecting dynamic feedbacks in the form of human instigation of and subsequent adaptation to water scarcity via irrigated cropping changes. We introduce a large-scale, multi-agent hydroeconomic model applied to the United States to evaluate water shortage outcomes that emerge from the interplay between hydrologic-driven water availability, reservoir management, and farmer cropping adaptation. Farmer cropping adaptivity is specified using a positive economic approach calibrated to observed data. Comparative experiments reveal that neglecting farmer cropping adaptation leads to pronounced overestimation of water shortages, with adaptation alleviating U.S.-wide annual water shortage by as much as 58 percent in a numerical experiment that mimics U.S. hydrology from 1950-2009.
+Large-scale hydrological models (LHMs) are commonly used for regional and global assessment of future water shortage outcomes under climate and socioeconomic scenarios. The irrigation of croplands, which accounts for the lion’s share of human water consumption, is critical in understanding these water shortage trajectories. Despite irrigation’s defining role, LHM frameworks typically impose trajectories of land use that underlie irrigation demand, neglecting potential dynamic feedbacks in the form of human instigation of and subsequent adaptation to water shortage via irrigated crop area changes. We extend an LHM, MOSART-WM, with adaptive farmer agents, applying the model to the Continental United States to explore water shortage outcomes that emerge from the interplay between hydrologic-driven surface water availability, reservoir management, and farmer irrigated crop area adaptation. The extended modeling framework is used to conduct hypothetical computational experiment comparing differences between a model run with and without the incorporation of adaptive farmer agents. These comparative simulations reveal that accounting for farmer adaptation via irrigated crop area changes substantially alters modeled water shortage outcomes, with U.S.-wide annual water shortage reduced by as much as 42 percent when comparing adaptive and non-adaptive versions of the model forced with U.S. climatology from 1950-2009.
 
 ## Journal reference
 TBD
