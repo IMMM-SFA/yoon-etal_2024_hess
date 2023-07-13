@@ -1,6 +1,6 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5573141.svg)](https://doi.org/10.5281/zenodo.5573141)
 
-# yoon-etal_2021_hess
+# yoon-etal_2023_hess
 
 **Representing Farmer Irrigated Crop Area Adaptation in a Large-Scale Hydrological Model**
 
