@@ -112,14 +112,14 @@ __1.__ The monthly netCDF files are post-processed into a consolidated csv file 
 
 __2.__ The "abm_output_processing.py" script is used to further post-process output, taking the annual abm output csv files and the wm summary file generated in __[1]__ above as inputs.
 
-__3.__ Figure 1a is generated based upon taking post-processed output from __[2]__ and developing the final visualizations in Tableau. Final touch ups (e.g., drought labels) are added in Inkscape.
+__3.__ Figure 2a is generated based upon taking post-processed output from __[2]__ and developing the final visualizations in Tableau. Final touch ups (e.g., drought labels) are added in Inkscape.
 
-__4.__ Figure 1b is generated based upon taking post-processed output from __[2]__ and generating the final maps in QGIS. A Stamen Terrain Background map is used for the visualization using QuickMapServices in QGIS. Final touch ups (e.g., modification of label locations) are conducted in Inkscape.
+__4.__ Figure 2b is generated based upon taking post-processed output from __[2]__ and generating the final maps in QGIS. A Stamen Terrain Background map is used for the visualization using QuickMapServices in QGIS. Final touch ups (e.g., modification of label locations) are conducted in Inkscape.
 
-__5.__ The crop area bump charts (left side) of Figure 2 are generated based upon taking post-processed output from __[2]__ and developing the final visualizations in Tableau. See guide here: http://www.datatableauandme.com/2017/08/how-to-area-bump-chart-in-tableau.html
+__5.__ The crop area bump charts (left side) of Figure 3 are generated based upon taking post-processed output from __[2]__ and developing the final visualizations in Tableau. See guide here: http://www.datatableauandme.com/2017/08/how-to-area-bump-chart-in-tableau.html
 
-__6.__ The shortage and adaptivity maps (right side) of Figure 2 are generated taking post-processed output from __[2]__ and developing the final visualizations in QGIS with final touch ups conducted in Inkscape.
+__6.__ The shortage and adaptivity maps (right side) of Figure 3 are generated taking post-processed output from __[2]__ and developing the final visualizations in QGIS with final touch ups conducted in Inkscape.
 
-__7.__ Figure 3 is generated based upon taking post-processed output from __[2]__ and developing the final visualizations in Tableau. Final touch ups (e.g., drought labels) are added in Inkscape.
+__7.__ Figure 4 is generated based upon taking post-processed output from __[2]__ and developing the final visualizations in Tableau. Final touch ups (e.g., drought labels) are added in Inkscape.
 
-__8.__ Figure 4 is developed in Powerpoint and does not rely on any data inputs
+__8.__ Figure 1 is developed in Powerpoint and does not rely on any data inputs
