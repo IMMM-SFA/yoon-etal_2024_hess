@@ -1,6 +1,6 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5573141.svg)](https://doi.org/10.5281/zenodo.5573141)
 
-# yoon-etal_2023_hess
+# yoon-etal_2024_hess
 
 **Representing Farmer Irrigated Crop Area Adaptation in a Large-Scale Hydrological Model**
 
@@ -65,11 +65,11 @@ __0c.__ Preprocess the output from steps __0a__ and __0b__ for use in MOSART-WM-
    * `nldas_ids.p` - Pickled list of NLDAS IDs to be included in the optimization; developed as part of this experiment.
    * Run the script `wmabm_data_process.py` from __[11]__ to generate the following files:
       * `max_land_constr_20201102_protocol2.p`
-      * `MOSART_WM_PMP_inputs_20201028.xlsx`
+      * `MOSART_WM_PMP_inputs_20220323_GW`
    * Run the script `hist_water_availability_abm.py` from __[13]__ which ingests some output files from a historical MOSART-WM simulation to generate the following files:
       * `hist_dependent_storage.csv`
       * `hist_avail_bias_correction_20201102.csv`
-   * Run the script `MOSART_WM_PMP_stage1_noloop.py` from __[13]__ to generate the following files:
+   * Run the script `MOSART_WM_PMP_stage1_noloop_gwalt.py` from __[13]__ to generate the following files:
       * `gammas_new_20201102_protocol2.p`
       * `net_prices_new_20201102_protocol2.p`
 
