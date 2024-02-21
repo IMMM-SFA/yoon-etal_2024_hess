@@ -1,4 +1,4 @@
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5573141.svg)](https://doi.org/10.5281/zenodo.5573141)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5573140)](https://doi.org/10.5281/zenodo.5573140)
 
 # yoon-etal_2024_hess
 
@@ -14,7 +14,7 @@ Jim Yoon<sup>1\*</sup>, Nathalie Voisin<sup>1</sup>, Christian Klassert<sup>1</s
 Large-scale hydrological models (LHMs) are commonly used for regional and global assessment of future water shortage outcomes under climate and socioeconomic scenarios. The irrigation of croplands, which accounts for the lion’s share of human water consumption, is critical in understanding these water shortage trajectories. Despite irrigation’s defining role, LHM frameworks typically impose trajectories of land use that underlie irrigation demand, neglecting potential dynamic feedbacks in the form of human instigation of and subsequent adaptation to water shortage via irrigated crop area changes. We extend an LHM, MOSART-WM, with adaptive farmer agents, applying the model to the Continental United States to explore water shortage outcomes that emerge from the interplay between hydrologic-driven surface water availability, reservoir management, and farmer irrigated crop area adaptation. The extended modeling framework is used to conduct hypothetical computational experiment comparing differences between a model run with and without the incorporation of adaptive farmer agents. These comparative simulations reveal that accounting for farmer adaptation via irrigated crop area changes substantially alters modeled water shortage outcomes, with U.S.-wide annual water shortage reduced by as much as 42 percent when comparing adaptive and non-adaptive versions of the model forced with U.S. climatology from 1950-2009.
 
 ## Journal reference
-TBD
+Yoon, J., Voisin, N., Klassert, C., Thurber, T., and Xu, W.: Representing Farmer Irrigated Crop Area Adaptation in a Large-Scale Hydrological Model, EGUsphere [preprint], https://doi.org/10.5194/egusphere-2023-1604, 2023.
 
 ## Data reference
 
@@ -29,20 +29,19 @@ TBD
 8. Voisin, N. et al. (2018). MOSART-WM-ABM Input Data [Data set]. Zenodo. https://doi.org/10.5281/zenodo.4836886.
 
 ### Output data
-9. Yoon, Jim. (2021). TBD the `all_nldas_cdl_data_v3.txt` [Data set]. Zenodo. TBD DOI
-10. Yoon, Jim. (2021). TBD other output data [Data set]. Zenodo. TBD DOI
+9. Yoon, J. (2024). Model run output for WM-ABM 2024 HESS Publication (Version v1) [Data set]. MSD-LIVE Data Repository. https://doi.org/10.57931/2293596.
 
 ## Code reference
-11. Yoon, Jim. (2021, TBD). IMMM-SFA/wm-abm: Water Management Agent Based Model (Version TBD). DOI TBD
-12. Yoon, Jim, & Thurber, Travis. (2021, May 5). IMMM-SFA/iwmm: MOSART-WM-ABM (Version v1.1.2.abm). Zenodo. http://doi.org/10.5281/zenodo.4739516.
-13. Yoon, Jim. (2021, TBD). IMMM-SFA/wm-pmp: PMP calibration and simulation for MOSART-WM-ABM (Version TBD). DOI TBD
+10. Jim Yoon, & Travis Thurber. (2024). IMMM-SFA/wm-abm_data_processing: v1.1.0 (v1.1.0). Zenodo. https://doi.org/10.5281/zenodo.10689455.
+11. Yoon, Jim, & Thurber, Travis. (2021). IMMM-SFA/iwmm: MOSART-WM-ABM (Version v1.1.2.abm). Zenodo. http://doi.org/10.5281/zenodo.4739516.
+12. Jim Yoon, & Travis Thurber. (2024). IMMM-SFA/wm-abm_pmp: v1.1.0 (v1.1.0). Zenodo. https://doi.org/10.5281/zenodo.10689430.
 
 ## Contributing modeling software
 | Model | Version | Repository Link | DOI |
 |-------|---------|-----------------|-----|
-| wm-abm_pmp | TBD | https://github.com/IMMM-SFA/wm-abm_pmp | TBD |
-| wm-abm_data_processing | TBD | https://github.com/IMMM-SFA/wm-abm_data_processing | TBD |
-| MOSART-WM-ABM | v1.1.2.abm | https://github.com/IMMM-SFA/iwmm | http://doi.org/10.5281/zenodo.4739516 |
+| wm-abm_pmp | v1.1.0 | https://github.com/IMMM-SFA/wm-abm_pmp | https://doi.org/10.5281/zenodo.5570500 |
+| wm-abm_data_processing | v1.1.0 | https://github.com/IMMM-SFA/wm-abm_data_processing | https://doi.org/10.5281/zenodo.5570863 |
+| MOSART-WM-ABM | v1.1.2.abm | https://github.com/IMMM-SFA/iwmm | https://doi.org/10.5281/zenodo.4739516 |
 
 ## Reproduce my experiment
 __0a.__ Preprocess the USDA data to produce these files:
@@ -56,28 +55,28 @@ __0a.__ Preprocess the USDA data to produce these files:
 
 __0b.__ Download the Cropland Data Layer (CDL) files for 2008-2018 from __[7]__ and preprocess:
    * For each year, sum the pixels for each CDL Crop category within each 1/8 degree North American Land Data Assimilation System (NLDAS) grid cell using ArcMap or similar tool; producing files like `cdl_{year}_clean.csv`
-   * Run the script `cdl_processing.py` from __[11]__ to combine the yearly files into a single file in the expected format: `all_nldas_cdl_data_v3.txt`
+   * Run the script `cdl_processing.py` from __[10]__ to combine the yearly files into a single file in the expected format: `all_nldas_cdl_data_v3.txt`
 
 __0c.__ Preprocess the output from steps __0a__ and __0b__ for use in MOSART-WM-ABM:
    * `crop_ids_by_farm.p` - Pickled dictionary mapping farm ID to the list of crop IDs on the farm; developed as part of this experiment.
    * `NLDAS_Grid_Reference.csv` - Maps NLDAS IDs to latitude/longitude coordinates; developed as part of this experiment by spatially joining an NLDAS shapefile with a U.S. counties shapefile in GIS.
    * `nldas.txt` - Subset of columns from `NLDAS_Grid_Reference.csv`.
    * `nldas_ids.p` - Pickled list of NLDAS IDs to be included in the optimization; developed as part of this experiment.
-   * Run the script `wmabm_data_process.py` from __[11]__ to generate the following files:
+   * Run the script `wmabm_data_process.py` from __[10]__ to generate the following files:
       * `max_land_constr_20201102_protocol2.p`
       * `MOSART_WM_PMP_inputs_20220323_GW`
-   * Run the script `hist_water_availability_abm.py` from __[13]__ which ingests some output files from a historical MOSART-WM simulation to generate the following files:
+   * Run the script `hist_water_availability_abm.py` from __[12]__ which ingests some output files from a historical MOSART-WM simulation to generate the following files:
       * `hist_dependent_storage.csv`
       * `hist_avail_bias_correction_20201102.csv`
-   * Run the script `MOSART_WM_PMP_stage1_noloop_gwalt.py` from __[13]__ to generate the following files:
+   * Run the script `MOSART_WM_PMP_stage1_noloop_gwalt.py` from __[12]__ to generate the following files:
       * `gammas_new_20201102_protocol2.p`
       * `net_prices_new_20201102_protocol2.p`
 
-__1.__ The results of step __0a__ are available as part of the code repository __[11]__; the results of step __0b__ can be downloaded from __[9]__; the results of step __0c__ are available as part of the code repository __[12]__.
+__1.__ The results of step __0a__ are available as part of the code repository __[10]__; the results of step __0b__ can be downloaded from __[9]__; the results of step __0c__ are available as part of the code repository __[12]__.
 
 __2.__ Download and unpack the MOSART-WM-ABM input data from __[8]__ into a supercomputing environment.
 
-__3.__ Clone the MOSART-WM-ABM repository __[12]__ into a supercomputing environment; modifications to the source code may be necessary to run on unsupported machines.
+__3.__ Clone the MOSART-WM-ABM repository __[11]__ into a supercomputing environment; modifications to the source code may be necessary to run on unsupported machines.
 
 __4.__ From the repository root directory, setup the model with the following shell commands (replacing sections surrounded by curly braces with the specifics of your environment):
    * `./cime/script/create_newcase --case {absolute path to a directory to create for your run} --res NLDAS_NLDAS --compset mosart_runoff_driven --project {cost center for your use of supercomputer}`
@@ -101,7 +100,7 @@ __6.__ Build the model with the shell command: `./case.build`
 
 __7.__ Submit the model run to the job queue with the shell command: `./case.submit`
 
-__8.__ If all is well, the model will eventually run, generating output and log files into your directory within the supercomputer's scratch file system, including the data found in __[10]__.
+__8.__ If all is well, the model will eventually run, generating output and log files into your directory within the supercomputer's scratch file system, including the data found in __[9]__.
 
 ## Reproduce my figures
 Reproduce my figures:
