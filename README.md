@@ -1,4 +1,4 @@
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5573140)](https://doi.org/10.5281/zenodo.5573140)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5573140.svg)](https://doi.org/10.5281/zenodo.5573140)
 
 # yoon-etal_2024_hess
 
